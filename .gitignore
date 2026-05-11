@@ -1,0 +1,104 @@
+# Root-level .gitignore for monorepo structure (Next.js + Node.js backend)
+
+# ============ NODE & DEPENDENCIES ============
+**/node_modules/
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# ============ ENVIRONMENT VARIABLES (CRITICAL - NEVER COMMIT SECRETS) ============
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============ DATABASE ============
+*.db
+*.sqlite
+*.sqlite3
+*.mongo
+data/
+mongodb/
+
+# ============ OS FILES ============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============ IDE & EDITORS ============
+.vscode/
+.vscode-test/
+.idea/
+.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.vim/
+.emacs.d/
+*.iml
+.classpath
+.c9/
+*.launch
+.settings/
+
+# ============ FRONTEND (Next.js) ============
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+frontend/.vercel
+frontend/dist/
+frontend/build/
+
+# ============ BACKEND ============
+backend/dist/
+backend/build/
+backend/coverage/
+
+# ============ TESTING ============
+coverage/
+.nyc_output/
+*.lcov
+.jest_cache/
+*.tap
+*.tgz
+
+# ============ LOGS ============
+*.log
+npm-debug.log*
+npm-error.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+lerna-debug.log*
+*.log
+logs/
+
+# ============ TEMPORARY & BUILD CACHE ============
+dist/
+build/
+.cache/
+.parcel-cache/
+.eslintcache/
+.stylelintcache/
+.turbo/
+.vite/
+*.tsbuildinfo
+
+# ============ MISC ============
+.env.*.local.example
+*.pem
+*.key
+*.crt
+.git-credentials
+.npmrc
+.yarnrc
